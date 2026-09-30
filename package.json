@@ -16,6 +16,7 @@
     "@codemirror/lang-javascript": "^6.2.3",
     "@codemirror/view": "^6.36.2",
     "@uiw/react-codemirror": "^4.23.8",
+    "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
     "cors": "^2.8.5",

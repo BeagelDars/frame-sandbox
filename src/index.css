@@ -4,54 +4,48 @@
 
 @layer base {
   * {
-    border-color: #e5e5ea;
+    border-color: #262626;
   }
   body {
-    background-color: #fafafa;
-    color: #1a1a1a;
+    background-color: #09090b;
+    color: #fafafa;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
   }
 }
 
-/* Custom minimal scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d1d1d6;
+  background: #27272a;
   border-radius: 9999px;
+  border: 2px solid #09090b;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a6;
+  background: #3f3f46;
 }
 
-/* CodeMirror custom minimal light theme overrides */
-.cm-editor {
-  height: 100% !important;
-  font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace !important;
-  font-size: 13.5px !important;
-  line-height: 1.6 !important;
-  background-color: #fafafa !important;
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-.cm-editor .cm-scroller {
-  padding-top: 8px;
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.cm-editor .cm-gutters {
-  background-color: #fafafa !important;
-  color: #a1a1a6 !important;
-  border-right: 1px solid #f0f0f2 !important;
+/* Cyber RGB Glow Mode */
+.theme-cyber {
+  --glow-primary: #38bdf8;
+  --glow-secondary: #c084fc;
 }
 
-.cm-editor.cm-focused {
-  outline: none !important;
-}
-
-.cm-lineNumbers .cm-gutterElement {
-  padding: 0 12px 0 8px !important;
+.theme-cyber .rgb-glow {
+  box-shadow: 0 0 35px -5px rgba(56, 189, 248, 0.25), 0 0 20px -5px rgba(192, 132, 252, 0.2);
 }
